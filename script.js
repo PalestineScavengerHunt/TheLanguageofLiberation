@@ -18,7 +18,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station1.jpeg",
     style: "art",
-    nextDirection: "[Direction from Station 1 to Station 2]"
+    nextDirection: "Turn around and walk toward the cars. Look for your next clue by the bricks."
   },
 
   {
@@ -35,7 +35,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/greatmarch.png",
     style: "march",
-    nextDirection: "[Direction from Station 2 to Station 3]"
+    nextDirection: "Walk on the path toward the building and look for a map."
   },
 
   {
@@ -52,7 +52,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station3.jpeg",
     style: "archive",
-    nextDirection: "[Direction from Station 3 to Station 4]"
+    nextDirection: "Make your way to the art display and look for the word Sumud."
   },
 
   {
@@ -69,7 +69,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station4.jpg",
     style: "sumud",
-    nextDirection: "[Direction from Station 4 to Station 5]"
+    nextDirection: "Head toward the museum and find your clue on a wall/stand of images of Palestine."
   },
 
   {
@@ -86,7 +86,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station5.jpg",
     style: "strike",
-    nextDirection: "[Direction from Station 5 to Station 6]"
+    nextDirection: "Approach the stage to find your next clue. If you’re already sitting nearby, it may be right beside you."
   },
 
   {
@@ -103,7 +103,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station6.jpg",
     style: "testimony",
-    nextDirection: "[Direction from Station 6 to Station 7]"
+    nextDirection: "Take a step (a bunch of steps) back from the stage and look for your clue on the middle pole."
   },
 
   {
@@ -120,7 +120,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station7.jpg",
     style: "school",
-    nextDirection: "[Direction from Station 7 to Station 8]"
+    nextDirection: "Walk toward the end of the bazaar and find the tree that holds your key."
   },
 
   {
@@ -137,7 +137,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station8.jpg",
     style: "boycott",
-    nextDirection: "[Direction from Station 8 to Station 9]"
+    nextDirection: "Continue past the bazaar and past the pavilion. Look for a rock with your next clue."
   },
 
   {
@@ -154,7 +154,7 @@ const stations = [
     media: "image",
     mediaFile: "assets/images/station9.jpg",
     style: "olive",
-    nextDirection: "[Direction from Station 9 to Station 10]"
+    nextDirection: "Return to where you began to find your final clue."
   },
 
   {
