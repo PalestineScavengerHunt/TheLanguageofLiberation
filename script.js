@@ -27,13 +27,13 @@ const stations = [
     letter: "C",
     title: "The Great March of Return",
     arabic: "الاحتجاج",
-    clue: "A wide photograph of Palestinians gathering during the 2018 Great March of Return in Gaza.",
+    clue: "",
     text: [
       "The Great March of Return began on Land Day, March 30, 2018. Palestinians in Gaza joined mass demonstrations calling for the Palestinian right of return and an end to the blockade.",
       "The demonstrations used public gathering and collective visibility to assert Palestinian rights before the world."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/greatmarch.png",
     style: "march",
     nextDirection: "[Direction from Station 2 to Station 3]"
   },
@@ -44,13 +44,13 @@ const stations = [
     letter: "I",
     title: "Documenting What Cannot Be Erased",
     arabic: "التوثيق",
-    clue: "An archival table with a historical map, land deed, village record, family photograph, and written testimony.",
+    clue: "",
     text: [
       "Palestinian historians, researchers, archivists, and families preserve maps, land records, photographs, testimonies, and the names of depopulated villages.",
       "Documentation challenges erasure by preserving evidence of Palestinian life, history, community, and belonging."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station3.jpeg",
     style: "archive",
     nextDirection: "[Direction from Station 3 to Station 4]"
   },
@@ -61,13 +61,13 @@ const stations = [
     letter: "S",
     title: "Sumud: Remaining Rooted",
     arabic: "الصمود",
-    clue: "A Palestinian family harvesting olives, tending its land, or remaining beside its home.",
+    clue: "",
     text: [
       "Sumud — صمود — means steadfastness. It can be expressed by remaining on the land, caring for a home, harvesting olives, preserving community, and continuing ordinary life under extraordinary conditions.",
       "Sumud demonstrates the power of perseverance, rootedness, and refusing to be displaced."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station4.jpg",
     style: "sumud",
     nextDirection: "[Direction from Station 4 to Station 5]"
   },
@@ -78,13 +78,13 @@ const stations = [
     letter: "N",
     title: "The Power of Collective Refusal",
     arabic: "عدم التعاون",
-    clue: "Closed Palestinian shops during the 1936 general strike.",
+    clue: "",
     text: [
       "During the 1936 general strike, Palestinian workers, merchants, and communities collectively disrupted ordinary economic activity to oppose British colonial rule and Zionist settlement.",
       "Strikes and collective refusal demonstrate the political power people possess when they withdraw their labor and cooperation together."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station5.jpg",
     style: "strike",
     nextDirection: "[Direction from Station 5 to Station 6]"
   },
@@ -95,13 +95,13 @@ const stations = [
     letter: "S",
     title: "Testimony and Memory",
     arabic: "الشهادة",
-    clue: "A Palestinian elder sharing memories with younger generations beside a key, village photograph, or map.",
+    clue: "",
     text: [
       "Palestinian survivors and elders have preserved memories of their villages, homes, customs, and displacement through oral history.",
       "Telling these stories prevents Palestinian experiences from being erased and carries memory from one generation to the next."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station6.jpg",
     style: "testimony",
     nextDirection: "[Direction from Station 6 to Station 7]"
   },
@@ -112,13 +112,13 @@ const stations = [
     letter: "E",
     title: "Education Against Erasure",
     arabic: "التعليم",
-    clue: "Palestinian children learning inside a home or community classroom during the First Intifada.",
+    clue: "",
     text: [
       "When Palestinian schools and universities were closed during the First Intifada, communities organized education in homes, mosques, and other informal spaces.",
       "By continuing to teach, Palestinians refused to allow military closures to deprive an entire generation of education."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station7.jpg",
     style: "school",
     nextDirection: "[Direction from Station 7 to Station 8]"
   },
@@ -129,13 +129,13 @@ const stations = [
     letter: "T",
     title: "Boycott and Collective Pressure",
     arabic: "المقاطعة",
-    clue: "A hand returning a product to a store shelf beside a shopping basket or receipt.",
+    clue: "",
     text: [
       "Boycotts allow people to withhold financial support from companies and institutions connected to injustice.",
       "When practiced collectively, an ordinary purchasing decision becomes a form of organized economic pressure and principled collective action."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station8.jpg",
     style: "boycott",
     nextDirection: "[Direction from Station 8 to Station 9]"
   },
@@ -146,13 +146,13 @@ const stations = [
     letter: "R",
     title: "Rebuilding and Renewal",
     arabic: "إعادة البناء",
-    clue: "A Palestinian farmer replanting or tending an olive tree beside uprooted or damaged trees.",
+    clue: "",
     text: [
       "Palestinians rebuild homes, replant olive trees, and restore spaces damaged or destroyed by displacement and violence.",
       "Rebuilding refuses the idea that destruction must be permanent. It affirms an intention to remain, return, and begin again."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station9.jpg",
     style: "olive",
     nextDirection: "[Direction from Station 9 to Station 10]"
   },
@@ -163,13 +163,13 @@ const stations = [
     letter: "E",
     title: "Writing Against Erasure",
     arabic: "الكتابة",
-    clue: "An open Arabic poetry book, handwritten letter, manuscript, or pages of Palestinian prison literature.",
+    clue: "",
     text: [
       "Palestinian poets, novelists, journalists, prisoners, and diarists have used writing to document life, confront erasure, preserve memory, and imagine freedom.",
       "A written work can cross borders, survive its author, and ensure that experiences others attempt to silence remain present."
     ],
     media: "image",
-    mediaFile: "",
+    mediaFile: "assets/images/station10.jpg",
     style: "writing",
     nextDirection: ""
   }
