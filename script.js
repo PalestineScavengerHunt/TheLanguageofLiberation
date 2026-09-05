@@ -311,7 +311,7 @@ async function openScanner(){
   scanner=new QrScanner($("#cameraVideo"),result=>{
     const data=typeof result==="string"?result:result.data;
     let hash="";try{hash=new URL(data,location.href).hash}catch{}
-    if(!/^#station-?\d+$/i.test(hash)){scannerError("That code is not part of this scavenger hunt.");return}
+    if(!/^#station?\d+$/i.test(hash)){scannerError("That code is not part of this scavenger hunt.");return}
     closeScanner();location.hash=hash;
   },{returnDetailedScanResult:true,highlightScanRegion:true,highlightCodeOutline:true});
   try{await scanner.start()}catch{scannerError("Camera access was unavailable. Use your phone’s Camera app instead.")}
