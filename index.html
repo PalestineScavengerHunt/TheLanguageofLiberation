@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <meta name="theme-color" content="#f4efe5">
+  <title>The Language of Liberation — A Palestinian Scavenger Hunt</title>
+  <meta name="description" content="Follow ten clues through Palestinian perseverance, memory, creativity, and collective action to discover the language of liberation.">
+  <meta property="og:title" content="What Is the Language of Liberation?">
+  <meta property="og:description" content="A Palestinian scavenger hunt in ten clues.">
+  <meta property="og:image" content="og.png">
+  <link rel="icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="hunt-shell">
+    <div class="page-texture" aria-hidden="true"></div>
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true"><span></span></div>
+      <button class="icon-button" id="guideButton" aria-label="How to play">ⓘ</button>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">The Language of Liberation</p>
+      <h1>What is the language of liberation?</h1>
+      <p class="lede">Follow ten clues through different expressions of Palestinian perseverance, memory, creativity, and collective action. Collect every letter to discover the answer.</p>
+    </section>
+
+    <section class="progress-card" aria-label="Scavenger hunt progress">
+      <div class="progress-heading">
+        <div><span class="progress-label">Your answer</span><strong><span id="foundCount">0</span> <small>of 10 letters</small></strong></div>
+        <div class="progress-ring" id="progressRing"><span id="ringCount">0</span></div>
+      </div>
+      <div class="letter-grid" id="letterGrid"></div>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <p class="progress-copy" id="progressCopy">Your first letter is waiting.</p>
+    </section>
+
+    <section class="scan-panel">
+      <div class="scan-symbol" aria-hidden="true">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 12h10"/></svg>
+      </div>
+      <div><h2>Found your next clue?</h2><p>Scan its QR code using the button below or your phone’s Camera app.</p></div>
+      <button class="primary-button" id="scanButton">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4 16 7h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l1.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        Scan a Station
+      </button>
+    </section>
+
+    <footer>
+      <button class="text-button" id="resetButton">↻ Restart hunt</button>
+      <p>Use the same phone and browser so your progress stays saved.</p>
+    </footer>
+  </main>
+
+  <div class="modal-layer hidden" id="stationModal" role="dialog" aria-modal="true" aria-labelledby="stationTitle">
+    <div class="station-sheet">
+      <div class="sheet-handle"></div>
+      <button class="close-button" data-close="station" aria-label="Close station">×</button>
+      <div class="station-number" id="stationNumber"></div>
+      <div class="station-visual" id="stationVisual">
+        <div class="visual-stamp" id="mediaType"></div>
+        <p id="stationClue"></p>
+      </div>
+      <p class="arabic-title" id="stationArabic" lang="ar" dir="rtl"></p>
+      <h2 id="stationTitle"></h2>
+      <div class="explanation" id="stationExplanation"></div>
+      <div id="stationAction"></div>
+    </div>
+  </div>
+
+  <div class="modal-layer guide-layer hidden" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="guide-card">
+      <button class="close-button" data-close="guide" aria-label="Close instructions">×</button>
+      <p class="eyebrow">Welcome</p><h2 id="guideTitle">How to play</h2>
+      <ol>
+        <li><span>1</span><p>Begin at Station 0 and open your letter board.</p></li>
+        <li><span>2</span><p>Follow the physical direction to find your first clue.</p></li>
+        <li><span>3</span><p>Examine the image, scan its QR code, and read its story.</p></li>
+        <li><span>4</span><p>Tap <strong>Reveal Letter</strong>, then follow the direction on your phone.</p></li>
+        <li><span>5</span><p>Collect all ten letters to discover the language of liberation.</p></li>
+      </ol>
+      <div class="guide-note"><span>ⓘ</span><p>The letters will arrive out of order, but each one will automatically appear in its correct position.</p></div>
+      <button class="primary-button" id="beginButton">Begin the Hunt ›</button>
+    </div>
+  </div>
+
+  <div class="modal-layer scanner-layer hidden" id="scannerModal" role="dialog" aria-modal="true" aria-label="QR code scanner">
+    <div class="scanner-card">
+      <button class="close-button light" data-close="scanner" aria-label="Close scanner">×</button>
+      <div class="scanner-copy"><span>Scan a station</span><p>Hold the QR code inside the frame.</p></div>
+      <div class="camera-frame"><video id="cameraVideo" muted playsinline></video></div>
+      <p class="scanner-error hidden" id="scannerError"></p>
+      <p class="camera-help">You can also close this scanner and use your phone’s Camera app.</p>
+    </div>
+  </div>
+
+  <div class="modal-layer completion-layer hidden" id="completionModal" role="dialog" aria-modal="true" aria-labelledby="completeTitle">
+    <div class="completion-card">
+      <button class="close-button" data-close="completion" aria-label="Close completion message">×</button>
+      <p class="eyebrow">You discovered the language of liberation</p><h2 id="completeTitle">RESISTANCE</h2>
+      <p><strong>Resistance is the language of liberation.</strong></p>
+      <p>Palestinians have expressed resistance through rebuilding, education, testimony, documentation, sumud, boycott, art, collective refusal, protest, and writing.</p>
+      <p>Resistance does not take only one form. It preserves memory, protects identity, sustains community, challenges injustice, and imagines a liberated future.</p>
+      <blockquote>Which form of resistance expanded your understanding the most?</blockquote>
+      <button class="primary-button" data-close="completion">Return to Your Letters</button>
+    </div>
+  </div>
+
+  <script src="vendor/qr-scanner/qr-scanner.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
